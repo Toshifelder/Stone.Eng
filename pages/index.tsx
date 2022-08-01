@@ -98,9 +98,12 @@ const Home: NextPage<Props> = ({ gallery }) => {
           <div className={styles.galleryImages}>
             <ul className={styles.grid}>
               {Array.isArray(gallery) && gallery.map((gallery) => (
-                <li key={gallery.id} >
+                <li key={gallery.id}>
                   <Link href={`${gallery.link}`}>
-                    <a><Image src={gallery.image.url} width={300} height={300} alt=''/></a>
+                    <>
+                      <div className={styles.imageText}>{`${gallery.title}`}</div>
+                      <a><Image src={gallery.image.url} width={300} height={300} alt={gallery.title} /></a>
+                    </>
                   </Link>
                 </li>
               ))}
@@ -129,7 +132,7 @@ const Home: NextPage<Props> = ({ gallery }) => {
           <Link href="https://stoneengneer.official.ec/">
             <div className={styles.aboutShop}>
               <div className={styles.shopText}>Online Shop</div>
-                <a className={styles.shopImage}><Image src="/evo.jpg" alt="shopImage" width={1280} height={1280} /></a>
+                <a><Image src="/evo.jpg" alt="shopImage" width={1280} height={1280} /></a>
             </div>
           </Link>
         </div>

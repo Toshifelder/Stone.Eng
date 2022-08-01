@@ -51,14 +51,38 @@
   align-items: center;
 }
 .grid {
-  padding-right: 2.7rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 .grid > li {
-  margin-bottom: -0.188rem;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: -0.2rem;
+}
+.grid > li :hover{
+  transition-duration: 0.5s;
+  opacity: 0.8;
+}
+.imageText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50.4%);
+  z-index: 5;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  width: 100%;
+  height: 99%;
+  background-color: rgba(0, 188, 131, 0.9);
+  transition-duration: 0.5s;
+  opacity: 0;
+  color: #00593e;
 }
 
 
@@ -99,6 +123,11 @@
   height: 100%;
   margin: 2rem 4rem;
   padding: 2rem;
+  cursor: pointer;
+}
+.aboutShop :hover {
+  transition-duration: 0.5s;
+  opacity: 0;
 }
 .shopText {
   display: flex;
@@ -116,10 +145,6 @@
   height: 100%;
   background-color: rgba(0, 188, 131, 0.9);
   transition-duration: 0.5s;
-}
-.aboutShop :hover {
-  transition-duration: 0.5s;
-  opacity: 0;
 }
 
 
@@ -242,6 +267,15 @@
   font-size: small;
 }
 
+@media (max-width: 1600px) {
+  .about {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media (max-width: 1080px) {
   .about {
     display: flex;
@@ -256,6 +290,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 60vw;
   }
 
   .aboutTitle {
@@ -264,10 +299,11 @@
   }
 
   .aboutStatement {
-    font-size: 0.1rem;
+    font-size: 1rem;
   }
 
   .aboutShop {
+    min-width: 60vw;
   }
 }
 
@@ -287,6 +323,9 @@
   .galleryTitle {
     font-size: 1.2rem;
   }
+  .imageText {
+    font-size: 0.8rem;
+  }
   .about {
     display: flex;
     flex: 1;
@@ -299,19 +338,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 80vw;
   }
   .aboutTitle {
     font-size: 1.2rem;
     font-family: 'Anton', sans-serif;
   }
   .aboutStatement {
-    font-size: 0.1rem;
+    font-size: 0.8rem;
   }
   .aboutShop {
+    min-width: 80vw;
   }
-
+  .shopText {
+    font-size: 1.2rem;
+  }
   .contactTitle {
     font-size: 1.2rem;
+  }
+
+  .menu {
+    font-size: 0.8rem;
+  }
+
+  .signature {
+    font-size: 0.3rem;
   }
 }
 
