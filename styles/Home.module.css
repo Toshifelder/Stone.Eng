@@ -97,8 +97,8 @@
   width: 100%;
   background-image: url('../public/bg.jpg');
   /* background-repeat: no-repeat; */
-  background-attachment: scroll;
-  background-size: 120%;
+  background-attachment: fixed;
+  background-size: 130%;
 }
 
 .aboutText {
@@ -308,6 +308,9 @@
 }
 
 @media (max-width: 720px) {
+  .title {
+    transform: translateX(-15%);
+  }
   .titleLogo {
     max-width: 30vw;
     padding: 1rem 1rem 0rem 1rem;
@@ -324,7 +327,7 @@
     font-size: 1.2rem;
   }
   .imageText {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
   .about {
     display: flex;
@@ -332,6 +335,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('../public/bg-mobile.jpg');
+      background-attachment: fixed;
   }
   .aboutText {
     display: flex;
@@ -351,7 +356,7 @@
     min-width: 80vw;
   }
   .shopText {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
   .contactTitle {
     font-size: 1.2rem;
@@ -359,6 +364,10 @@
 
   .menu {
     font-size: 0.8rem;
+  }
+
+  .sns {
+    padding-bottom: 1rem;
   }
 
   .signature {

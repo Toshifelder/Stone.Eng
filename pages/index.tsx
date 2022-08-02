@@ -98,14 +98,12 @@ const Home: NextPage<Props> = ({ gallery }) => {
           <div className={styles.galleryImages}>
             <ul className={styles.grid}>
               {Array.isArray(gallery) && gallery.map((gallery) => (
-                <li key={gallery.id}>
-                  <Link href={`${gallery.link}`}>
-                    <>
-                      <div className={styles.imageText}>{`${gallery.title}`}</div>
-                      <a><Image src={gallery.image.url} width={300} height={300} alt={gallery.title} /></a>
-                    </>
-                  </Link>
-                </li>
+                <Link href={`${gallery.link}`} key={gallery.id}>
+                  <li key={gallery.id}>
+                    <div className={styles.imageText}>{`${gallery.title}`}</div>
+                    <a><Image src={gallery.image.url} width={300} height={300} alt={gallery.title} /></a>
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
