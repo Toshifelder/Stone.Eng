@@ -29,6 +29,22 @@ const mail = async (req: NextApiRequest, res: NextApiResponse) => {
     `,
   });
 
+  await transporter.sendMail({
+    from: data.email,
+    to: process.env.NEXT_PUBLIC_MAIL_USER,
+    subject: '以下の内容でお問い合わせを受け付けました',
+    text: `
+    名前
+    ${data.name}
+
+    メールアドレス
+    ${data.email}
+
+    お問い合わせ内容
+    ${data.msg}
+    `,
+  });
+
   res.status(200).json({
     success: true,
   });

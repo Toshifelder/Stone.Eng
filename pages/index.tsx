@@ -60,6 +60,11 @@ const Home: NextPage<Props> = ({ gallery }) => {
       console.log('Response received');
       if (res.status === 200) {
         console.log('Response succeeded!');
+        alert(
+          `お問い合わせを受け付けました。
+ご入力いただいたメールアドレスに自動返信メールをお送りしております。
+届いていない場合は、正常に送信できていない可能性がございますので、恐れ入りますがご入力を確認のうえ、再度ご送信下さい。`
+        );
       } else {
         console.log(`Error: Status Code ${res.status}`);
       }
