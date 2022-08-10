@@ -118,18 +118,13 @@ const Home: NextPage<Props> = ({ gallery }) => {
           <div className={styles.aboutText}>
             <h2 className={styles.aboutTitle}>ABOUT</h2>
             <div className={styles.aboutStatement}>
-              Stone.Engineer = 石器技術者<br /><br />
-              石器時代では欲しい物がある場合、
-              自身で検討し（デザイン）、
-              自身で制作する（施工）のが当たり前でした。<br /><br />
-              これこそモノづくりの原点だと考えます。<br /><br />
-              このブランドのEngineerたちは、
-              建築業界やデザイン、
-              ITなどの専門的な本職についており、
-              その経験を活かして
-              より良いプロダクトを制作するために集結しました。<br /><br />
-              数百回の試行錯誤を経て、
-              皆様により良い商品をご提供致します。<br /><br />
+              ものづくりの原点は、およそ石器時代の職工たちにあると思われます。<br /><br />
+              彼等は欲しい物がある場合、自ら考え、自らの手で創り上げることを当たり前としていました。<br /><br /><br />
+              わたしたちはこういった&ldquo; 原始のものづくりの精神 &ldquo;を礎に制作に取り組んでおります。<br /><br />
+              こだわりやわがままを余す事なく注ぎ込むため、徹頭徹尾わたしたちの手で創っております。<br /><br /><br />
+              当ブランドのEngineerたちは、建築やデザイン,ITなど様々な分野から、誠実にものづくりと向き合い、より良いプロダクトを紡ぎ上げるに結集しました。<br /><br /><br />
+              &lt; Stone.Engineer &gt;<br />
+              太古の職人たちへのリスペクトと、ものづくりに慈しみを込めて、ブラントネームに&lsquo;Stone&lsquo;の名を冠しております。<br /><br />
             </div>
           </div>
           <Link href="https://stoneengneer.official.ec/">
