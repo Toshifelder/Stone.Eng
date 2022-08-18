@@ -30,7 +30,7 @@ const mail = async (req: NextApiRequest, res: NextApiResponse) => {
   });
 
   await transporter.sendMail({
-    from: data.email,
+    from: process.env.NEXT_PUBLIC_MAIL_USER,
     to: process.env.NEXT_PUBLIC_MAIL_USER,
     subject: '以下の内容でお問い合わせを受け付けました',
     text: `
