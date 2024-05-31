@@ -15,7 +15,7 @@ type Props = {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await client.get({ endpoint: "gallery" });
+  const data = await client.get({endpoint: "gallery"});
 
   return {
     props: {
